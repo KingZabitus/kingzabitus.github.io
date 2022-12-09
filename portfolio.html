@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-image: url("background.png");
+            background-color: #cccccc;
+            background-size: cover;
+        }
+
+        .barbutton {
+            position: fixed;
+            margin-left: 20px;
+            height: 45px;
+            z-index: 2;
+        }
+
+        .barralateral{
+            background: linear-gradient(to bottom, #300425, #25419e);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            padding: 20px 0;
+            transition: all 0.5s ease;
+        }
+
+        body.active .barralateral{
+            position: relative;
+            left: -255px;
+            top: 0;
+            height: 100%;
+            padding: 20px 0;
+            transition: all 0.5s ease;
+        }
+
+        .instaicon {
+            height: 50px;
+            margin-top: 200px;
+            margin-left: 20px;
+        }
+        .giticon {
+            height: 50px;
+            margin-left: 20px;
+        }
+        .disicon {
+            height: 50px;
+            margin-left: 20px;
+        }
+    </style>
+    <title>Site Portfólio</title>
+</head>
+<body>
+    <div>
+        <img class="barbutton" src="barrinhas.png">
+    </div>
+    <div class="tudo">
+        <div class="barralateral">
+            <a href="https://www.instagram.com/marcospag81/" target="_blank"><img class="instaicon" src="instagram.png" alt="instagram.com/marcospag81/"></a>
+            <br><a href="https://github.com/KingZabitus" target="_blank"><img class="giticon" src="github.png" alt="github.com/KingZabitus/"></a>
+            <br><a href="https://discord.com/users/Zab#0451" target="_blank"><img class="disicon" src="discord.png" alt=""></a>
+        </div>
+    </div>
+    <script>
+        var barbutton = document.querySelector(".barbutton");
+        barbutton.addEventListener("click", function(){
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+</body>
+</html>
